@@ -9,10 +9,131 @@
     <!-- Talwind && Daisy UI CDN link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Raleway Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Inter Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Internal Css -->
+    <style>
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
+    <header class="font-raleway max-w-[1170px] mx-auto">
+        <!-- nav var start -->
+        <nav>
+            <div>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="text-[#030712B2] font-medium menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a>Home</a></li>
+                                <li><a>About</a></li>
+                                <li><a>Destination</a></li>
+                                <li><a>Search</a></li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-ghost text-4xl text-[#030712] font-extrabold">E-Ticket</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 text-[#030712B2] font-medium">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <a class="btn text-[#1DD100] bg-[#1DD1001A] border-2 border-[#1DD10066] text-xl font-bo">Bus<img
+                                src="images/bus-icon.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- nav var end -->
 
+        <!-- banner section start -->
+        <div class="max-sm:mx-3 ">
+            <div class="hero min-h-screen rounded-xl" style="background-image: url(images/banner.png);">
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="lg:-mt-28">
+                        <h1 class="mb-5 text-2xl lg:text-6xl font-extrabold text-[#FFF] max-w-[700px]">End-to-End Travel
+                            with <span class="text-[#1DD100] lg:text-5xl">Green-Line Paribahan</span></h1>
+                        <p class="mb-5 max-w-[500px] mx-auto">Yes, you can run unit tests and view the results directly
+                            within the app. The integrated testing features allow for a streamlined .</p>
+                        <button class="btn text-xl font-bold bg-[#1DD100] text-[#030712] border-none">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-sm:mt-7 max-sm:mx-3">
+            <div class="flex justify-around lg:relative bottom-16 max-sm:flex-col gap-3">
+                <div>
+                    <div class="w-72 h-32 bg-white rounded-xl border-b-2 border-[#1DD100] shadow-2xl">
+                        <div class="flex items-center justify-center gap-3  py-7">
+                            <div><img src="images/people.png" alt=""></div>
+                            <div>
+                                <h3 class="text-4xl font-bold font-inter text-[#030712]">500K+</h3>
+                                <p class="font-inter text-lg text-[#03071299]">Registered users</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72 h-32 bg-white rounded-xl border-b-2 border-[#1DD100] shadow-2xl">
+                        <div class="flex items-center justify-center gap-3  py-7">
+                            <div><img src="images/ticket-cupon.png" alt=""></div>
+                            <div>
+                                <h3 class="text-4xl font-bold font-inter text-[#030712]">1.7 lacks</h3>
+                                <p class="font-inter text-lg text-[#03071299]">Tickets sold</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72 h-32 bg-white rounded-xl border-b-2 border-[#1DD100] shadow-2xl">
+                        <div class="flex items-center justify-center gap-3  py-7">
+                            <div><img src="images/stoppage.png" alt=""></div>
+                            <div>
+                                <h3 class="text-4xl font-bold font-inter text-[#030712]">80K+</h3>
+                                <p class="font-inter text-lg text-[#03071299]">Rental partners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
