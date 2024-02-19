@@ -123,38 +123,76 @@ function applyBtn() {
     console.log(cuponEvent);
     if (cuponEvent === 'new15') {
         const discountPrice = totalPrice * 0.15;
-        grandTotalPrice=totalPrice-discountPrice;
+        grandTotalPrice = totalPrice - discountPrice;
         setGrandPrice('grand-total')
         addClassById('input-cupon')
         addClassById('enabled-btn')
         console.log(grandTotalPrice);
     }
-    else if(cuponEvent === 'couple20'){
+    else if (cuponEvent === 'couple20') {
         const discountPrice = totalPrice * 0.20;
-        grandTotalPrice=totalPrice-discountPrice;
+        grandTotalPrice = totalPrice - discountPrice;
         console.log(grandTotalPrice);
         setGrandPrice('grand-total')
         addClassById('input-cupon')
         addClassById('enabled-btn')
     }
-    else{
+    else {
         alert('Invalid Cupon Code')
     }
 
 }
 
-document.getElementById('passenger-info').addEventListener('keyup',function(){
-    const passenger=document.getElementById('passenger-info')
-    const passengerFroms=passenger.value.split('').length
-    return passengerFroms
-})
-if(passengerFroms>3){
-    enableBtn('enabled-btn-2')
-}
-document.getElementById('number-info').addEventListener('keyup',function(){
-    const passenger=document.getElementById('number-info')
-    const passengerFroms=passenger.value.split('').length
-    if(passengerFroms>10){
+
+// function addEventById(elemntId) {
+//     const addEvents = document.getElementById(elemntId)
+//     const addEvent=addEvents.value.split('').length
+
+// }
+
+document.addEventListener('keyup', function () {
+    const passenger1 = document.getElementById('passenger-info')
+    const passengerFroms1 = passenger1.value.split('').length
+    const passenger2 = document.getElementById('number-info')
+    const passengerFroms2 = passenger2.value.split('').length
+    const passenger3 = document.getElementById('email-info')
+    const passengerFroms3 = passenger3.value.split('').length
+    if (count > 0 && passengerFroms1 > 0 && passengerFroms2 > 0) {
         enableBtn('enabled-btn-2')
     }
 })
+
+
+const nextBtn = document.getElementById('enabled-btn-2')
+nextBtn.addEventListener('click', function () {
+    const passenger2 = document.getElementById('number-info')
+    const passengerFroms2 = passenger2.value.split('').length
+    if (passengerFroms2 === 11){
+        const modals=document.getElementById('modal')
+        modals.classList.remove('hidden')
+    }
+    else{
+        alert('Please enter your valid 11 digit number')
+    }
+})
+
+const continueModal=document.getElementById('continue-modal')
+continueModal.addEventListener('click',function(){
+    const modals=document.getElementById('modal')
+    modals.classList.add('hidden')
+})
+// document.getElementById('passenger-info').addEventListener('keyup',function(){
+//     const passenger=document.getElementById('passenger-info')
+//     const passengerFroms=passenger.value.split('').length
+//     if(passengerFroms>3){
+//         enableBtn('enabled-btn-2')
+//     }
+// })
+
+// document.getElementById('number-info').addEventListener('keyup',function(){
+//     const passenger=document.getElementById('number-info')
+//     const passengerFroms=passenger.value.split('').length
+//     if(passengerFroms>10){
+//         enableBtn('enabled-btn-2')
+//     }
+// })
