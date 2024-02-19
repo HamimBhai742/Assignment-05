@@ -69,6 +69,7 @@ for (const busSeat of busSeats) {
         totalPrice += perTicketPrice;
         // console.log(totalPrice);
         setTicketPrice('total-price')
+        setTicketPrice('grand-total')
 
         const leftSeat = document.getElementById('left-seat')
         const leftseatNum = leftSeat.innerText
@@ -138,7 +139,7 @@ function applyBtn() {
         addClassById('enabled-btn')
     }
     else {
-        alert('Invalid Cupon Code')
+        alert('Invalid Coupon Code')
     }
 
 }
