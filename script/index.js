@@ -10,6 +10,9 @@ for (const busSeat of busSeats) {
             return 'You cannot buy any more tickets'
 
         }
+        // console.log(busSeat);
+    
+
         const busSeatClassList = busSeat.classList
         busSeatClassList.remove('bg-[#F7F8F8]')
         busSeatClassList.remove('text-[#03071280]')
@@ -133,6 +136,5 @@ nextBtn.addEventListener('click', function () {
 
 const continueModal=document.getElementById('continue-modal')
 continueModal.addEventListener('click',function(){
-    const modals=document.getElementById('modal')
-    modals.classList.add('hidden')
+    window.location.reload()
 })
