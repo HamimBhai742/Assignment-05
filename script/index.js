@@ -3,15 +3,17 @@ console.log(busSeats);
 let count = 0;
 let totalPrice = 0;
 for (const busSeat of busSeats) {
-    console.log(busSeat);
+    // console.log(busSeat.classList);
     busSeat.addEventListener('click', function (event) {
+
         if (count > 3) {
             alert('You cannot buy any more tickets')
             return 'You cannot buy any more tickets'
 
         }
         // console.log(busSeat);
-    
+
+        busSeat.setAttribute('disabled',true)
 
         const busSeatClassList = busSeat.classList
         busSeatClassList.remove('bg-[#F7F8F8]')
@@ -21,7 +23,7 @@ for (const busSeat of busSeats) {
         busSeatClassList.add('text-[#FFF]')
 
         let busSeatName = busSeat.innerText
-        console.log(busSeatName);
+        // console.log(busSeatName);
 
         count = count + 1;
         countTicket('count-buy-ticket')
@@ -113,8 +115,8 @@ document.addEventListener('keyup', function () {
     const passengerFroms1 = passenger1.value.split('').length
     const passenger2 = document.getElementById('number-info')
     const passengerFroms2 = passenger2.value.split('').length
-    const passenger3 = document.getElementById('email-info')
-    const passengerFroms3 = passenger3.value.split('').length
+    // const passenger3 = document.getElementById('email-info')
+    // const passengerFroms3 = passenger3.value.split('').length
     if (count > 0 && passengerFroms1 > 0 && passengerFroms2 > 0) {
         enableBtn('enabled-btn-2')
     }
